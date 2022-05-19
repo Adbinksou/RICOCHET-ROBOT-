@@ -48,7 +48,7 @@ public class Jeu {
     }
 
 
-    private static void destinationJeton() {
+    public static void destinationJeton() {
 
 
 
@@ -189,7 +189,7 @@ public class Jeu {
     }
 
 
-   public static void verifJeton(Robot robot){
+   public static int verifJeton(Robot robot){
        boolean M;
        boolean L;
 
@@ -207,10 +207,12 @@ public class Jeu {
                     System.out.println("id jetontirage : "+jeton.getId());
                     if (jeton.getId() == destinationJeton.getId()){
                         System.out.println("AD TROP FORT");
+                        return 1;
                     }
                 }
             }
-        }
+        } return 0;
+
 
    }
 

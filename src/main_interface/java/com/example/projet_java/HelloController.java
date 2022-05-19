@@ -116,7 +116,11 @@ public class HelloController {
         }
 
 
-        Image jeton = new Image(getClass().getResourceAsStream("/img/"+ Jeu.jeton.getPath() + ".png"), (SCREEN_SIZE / 17), (SCREEN_SIZE / 17), false, false);
+        JetonTirage jetonActuel;
+        jetonActuel = choisirJeton();
+        System.out.println(jetonActuel.getPath());
+
+        Image jeton = new Image(getClass().getResourceAsStream("/img/"+ jetonActuel.getPath() + ".png"), (SCREEN_SIZE / 17), (SCREEN_SIZE / 17), false, false);
         image = new ImageView(jeton);
         root.add(image,0 , 17);
 
