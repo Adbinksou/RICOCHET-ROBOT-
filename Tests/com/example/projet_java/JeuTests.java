@@ -7,6 +7,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class JeuTests {
+
+    /**
+     * Test qui vérifie si le déplacement en haut fonctionne comme il faut
+     */
     @Test
     public void deplacementHautTest(){
         Jeu.genererPlateau();
@@ -21,6 +25,10 @@ public class JeuTests {
         Assertions.assertArrayEquals(posExperimentale,posExpected);
     }
 
+
+    /**
+     * Test qui vérifie si le déplacement en bas fonctionne comme il faut
+     */
     @Test
     public void deplacementBasTest(){
         Jeu.genererPlateau();
@@ -35,6 +43,9 @@ public class JeuTests {
         Assertions.assertArrayEquals(posExperimentale,posExpected);
     }
 
+    /**
+     * Test qui vérifie si le déplacement à gauche fonctionne comme il faut
+     */
     @Test
     public void deplacementGaucheTest(){
         Jeu.genererPlateau();
@@ -48,7 +59,9 @@ public class JeuTests {
         Assertions.assertArrayEquals(posExperimentale,posExpected);
     }
 
-
+    /**
+     * Test qui vérifie si le déplacement à droite fonctionne comme il faut
+     */
     @Test
     public void deplacementDroitTest(){
         Jeu.genererPlateau();
