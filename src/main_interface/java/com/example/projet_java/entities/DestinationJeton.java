@@ -1,8 +1,7 @@
 package com.example.projet_java.entities;
 
-public class DestinationJeton {
-    String path;
-    int id;
+public class DestinationJeton extends Jeton {
+
     int posx;
     int posy;
     String couleur;
@@ -25,17 +24,8 @@ public class DestinationJeton {
         return posy;
     }
 
-
-    public String getPath() {
-        return path;
-
-    }
-
     public String getCouleur() {
         return couleur;
     }
 
-    public int getId() {
-        return id;
-    }
 }
