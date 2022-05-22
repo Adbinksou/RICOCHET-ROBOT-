@@ -249,9 +249,15 @@ public class Jeu {
     }
 
 
-
+    /**
+     * Fonction qui permet de générer les robots de 4 couleurs de position aléatoire dans la plateau
+     */
     public static void genererRobots() {
         robots = new Robot[4];
+
+        // Liste pour empecher la génération de robots au centre du plateau
+        List<Integer> randomList = List.of(0,1,2,3,4,5,6,7,10,11,12,13,14,15);
+
         Random random = new Random();
         int x;
         int y;
@@ -260,13 +266,15 @@ public class Jeu {
         List<String> paths = List.of("robot_rouge","robot_vert","robot_bleu","robot_jaune");
 
         for (int i=0; i<4;i++){
-            x = random.nextInt(0,taillePlateau-1);
-            y = random.nextInt(0,taillePlateau-1);
+            x = randomList.get(random.nextInt(0,randomList.size()-1));
+            y = randomList.get(random.nextInt(0,randomList.size()-1));
             robots[i] = new Robot(x,y,couleurs.get(i),paths.get(i));
         }
     }
 
-
+    /**
+     * Fonction qui permet de générer les cellules du plateau en mettant en place les murs
+     */
     public static void genererPlateau(){
         plateau = new Cellule[taillePlateau][taillePlateau];
 
@@ -385,7 +393,4 @@ public class Jeu {
         plateau[14][12].setMurDroit(true);
 
     }
-
-
-
 }

@@ -39,9 +39,15 @@ public class Robot {
     public int getPositionX() {
         return positionX;
     }
-
     public int getPositionY() {
         return positionY;
+    }
+
+    public int getPositionBaseX() {
+        return positionBaseX;
+    }
+    public int getPositionBaseY() {
+        return positionBaseY;
     }
 
     public String getPath() {
